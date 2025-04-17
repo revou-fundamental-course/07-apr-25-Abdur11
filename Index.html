@@ -8,20 +8,26 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+
+
+
 </head>
 
 <body>
     <!-- Header Content -->
     <header class="main-header">
         <!-- Logo -->
-        <div class="main-logo"></div>
+        <div class="main-logo">
+           <img class="logo" alt="MTs As Sidah" src="Images/logo.jpg">
+        </div>
 
         <!-- Navigation* -->
         <nav>
             <a href="#home-section">Home</a>
-            <a href="#our-profile-section">Our Profile</a>
-            <a href="#portfolio-section">Portfolio</a>
-            <a href="#message-us-section">Message Us</a>
+            <a href="#profile-section">Our Profile</a>
+            <a href="#headquarter-section">Portofolio</a>
+            <a href="#message-section">Message Us</a>
         </nav>
     </header>
 
@@ -32,56 +38,116 @@
         <!-- Home Section -->
         <section id="home-section">
             <header>
-                <h2>Hi _, Welcome to my website</h2>
+                <h2>Hi <span id="viewer-name"></span>, Welcome to my website</h2>
+                <p>Ini adalah website latihan pertama</p>
             </header>
 
             <!-- Banner Content* -->
-            <div class="banner-img"></div>
+            <div class="banner-img banner-1"></div>
+            <div class="banner-img banner-2"></div>
+            <div class="banner-img banner-3"></div>
 
             <!-- Banner Text -->
             <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <p>
+                MTs As Sidah terletak di Kota Kudus tepatnya di lokasi desa Karangrowo Kecamatan Undaan Kabupaten Kudus.
+                </p>
             </article>
         </section>
 
         <hr />
 
         <!-- Our Profile Section -->
-        <section id="our-profile-section">
+        <section id="profile-section">
             <header>
                 <h2>Our Profile</h2>
+
             </header>
 
             <!-- Our Profile Text -->
             <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                <p>
+                Nama saya Abdur Rohman, saya bekerja di madarsaha tsanawiyah "As Sidah" sebagai operator madrasah. Selain itu saya juga sebagai guru ngaji di "TPQ Al-Muyassar 01".
+                </p>
             </article>
         </section>
 
         <hr />
 
-        <!-- Portfolio Section -->
-        <section id="portfolio-section">
+        <!-- Our Headquarter Section -->
+        <section id="headquarter-section">
             <header>
-                <h2>Portfolio</h2>
+                <h2>Our Headquarter</h2>
             </header>
 
-            <!-- Portfolio Text -->
-            <article class="section-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
-            </article>
+            <section class="hq-container">
+
+                <div class="hq-item">
+                    <img src="Images/gambar-1.jpg" alt="MTs">
+                    <h4>MTs As Sidah</h4>
+                </div>
+
+                <div class="hq-item">
+                    <img src="Images/gambar-2.jpg" alt="TPQ">
+                    <h4>TPQ Al-Muyassar 01</h4>
+                </div>
+
+            </section>
+
         </section>
 
         <hr />
 
         <!-- Message Us Section -->
-        <section id="message-us-section">
+        <section id="message-section">
             <header>
                 <h2>Message Us</h2>
             </header>
-
-            <!-- Message Us Form -->
-            <form></form>
+            <div class="form-output-wrapper">
+            <div class="form-container">
+                <!-- Form Section -->
+                <div class="form-section">
+                  <form name="message-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                      <label for="nama">Nama</label>
+                        <span>:</span>
+                      <input type="text" id="nama" placeholder="Nama" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="dob">Tanggal Lahir</label>
+                      <span>:</span>
+                      <input type="date" id="dob" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Jenis Kelamin</label>
+                      <span>:</span>
+                      <div class="gender-options">
+                        <input type="radio" id="laki-laki" name="gender" value="Laki-Laki" />
+                        <label for="laki-laki">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="gender" value="Perempuan" />
+                        <label for="perempuan">Perempuan</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pesan">Pesan</label>
+                      <span>:</span>
+                      <textarea id="pesan" placeholder="Pesan" name="pesan"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                  </form>
+                </div>
+            
+                
+              </div>
+              <!-- Output Section -->
+                <div class="output-section">
+                  <p>Current time: <span id="current-time">-</span></p>
+                  <p>Nama: <span id="sender-name"></span></p>
+                  <p>Tanggal Lahir: <span id="sender-bday"></span></p>
+                  <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+                  <p>Pesan: <span id="sender-message"></span></p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -89,8 +155,11 @@
 
     <!-- Footer Content -->
     <footer>
-        <span>Made by Yama@2025</span>
+        <span align="center">Created By ABDUR ROHMAN 2025</span>
     </footer>
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
